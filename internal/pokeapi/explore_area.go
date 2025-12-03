@@ -1,6 +1,8 @@
 package pokeapi
 
-include (
+import (
+	"encoding/json"
+	"io"
 	"net/http"
 )
 
