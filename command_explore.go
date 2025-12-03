@@ -7,8 +7,8 @@ import (
 
 func commandExplore(cfg *config) error {
 	loc := cfg.location
-	if loc == nil {
-		return errors.New("No location specified")
+	if loc == "" {
+		return errors.New("no location specified")
 	}
 	locationsResp, err := cfg.pokeapiClient.ExploreLocationArea(loc)
 	if err != nil {

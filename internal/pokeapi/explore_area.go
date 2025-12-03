@@ -6,10 +6,10 @@ import (
 	"net/http"
 )
 
-func (c *Client) ExploreLocationArea(pageURL *string) (RespLocationArea, error) {
+func (c *Client) ExploreLocationArea(pageURL string) (RespLocationArea, error) {
 	url := baseURL + "/location-area/"
-	if pageURL != nil {
-		url = url + *pageURL
+	if pageURL != "" {
+		url = url + pageURL
 	}
 
 	if val, ok := c.cache.Get(url); ok {

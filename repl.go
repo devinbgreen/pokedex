@@ -13,7 +13,7 @@ type config struct {
 	pokeapiClient    pokeapi.Client
 	nextLocationsURL *string
 	prevLocationsURL *string
-	location         *string
+	location         string
 }
 
 func startRepl(cfg *config) {
