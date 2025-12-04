@@ -11,7 +11,8 @@ type RespShallowLocations struct {
 	} `json:"results"`
 }
 
-type RespLocationArea struct {
+// Location -
+type Location struct {
 	EncounterMethodRates []struct {
 		EncounterMethod struct {
 			Name string `json:"name"`
@@ -46,9 +47,9 @@ type RespLocationArea struct {
 		} `json:"pokemon"`
 		VersionDetails []struct {
 			EncounterDetails []struct {
-				Chance          int   `json:"chance"`
-				ConditionValues []any `json:"condition_values"`
-				MaxLevel        int   `json:"max_level"`
+				Chance          int           `json:"chance"`
+				ConditionValues []interface{} `json:"condition_values"`
+				MaxLevel        int           `json:"max_level"`
 				Method          struct {
 					Name string `json:"name"`
 					URL  string `json:"url"`
